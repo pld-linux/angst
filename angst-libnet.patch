@@ -1,0 +1,28 @@
+diff -uNr angst-0.4b-orig/angst.h angst-0.4b/angst.h
+--- angst-0.4b-orig/angst.h	2001-02-05 04:22:57.000000000 +0100
++++ angst-0.4b/angst.h	2004-08-10 13:12:18.946209952 +0200
+@@ -9,7 +9,7 @@
+ #include <stdarg.h>
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+-#include <libnet.h>
++#include <libnet1.h>
+ #include <pcap.h>
+ 
+ /* the default bpf program expression, if you change it and you want
+diff -uNr angst-0.4b-orig/Makefile.linux angst-0.4b/Makefile.linux
+--- angst-0.4b-orig/Makefile.linux	2004-08-10 13:11:16.488704000 +0200
++++ angst-0.4b/Makefile.linux	2004-08-10 13:11:48.827788648 +0200
+@@ -10,9 +10,9 @@
+ INSTALL_SBIN = /usr/bin/install -c -s -o root -g bin -m 555
+ INSTALL_MAN = /usr/bin/install -c -o root -g bin -m 444
+ CFLAGS = -O2 -Wall
+-INCLUDE = -I/usr/local/include
+-LIBS = -L/usr/local/lib `libnet-config --libs` -lpcap
+-DEFINE = `libnet-config --defines` -DLINUX #-DDEBUG
++INCLUDE = -I/usr/include
++LIBS = -L/usr/lib `libnet1-config --libs` -lpcap
++DEFINE = `libnet1-config --defines` -DLINUX #-DDEBUG
+ OBJS = main.o active.o enable.o help.o host.o pcap.o signal.o util.o missing/strlcat.o missing/strlcpy.o
+ 
+ .c.o:
