@@ -1,5 +1,5 @@
-Summary:	active sniffer
-Summary(pl):	aktywny sniffer
+Summary:	Active sniffer
+Summary(pl):	Aktywny sniffer
 Name:		angst
 Version:	0.4b
 Release:	1
@@ -26,12 +26,24 @@ address. The second method floods the local network with random MAC
 addresses (like macof v1.1 by Ian Vitek), causing switches to send
 packets to all ports.
 
+%description -l pl
+Angst to aktywny sniffer, oparty na libpcap i libnet. Angst dostarcza
+metody do agresywnego sniffowania w ¶rodowiskach lokalnych
+switchowanych sieci. Zrzuca payload wszystkich pakietów TCP odebranych
+na podanych portach. Co wiêcej, ma zaimplementowane (aktualnie dwie)
+metody aktywnego sniffowania. Pierwsza to monitorowanie ¿±dañ ARP i po
+w³±czeniu przekazywania IP na lokalnej maszynie wysy³anie odpowiedzi
+ARP przekierowuj±cych ca³e IP na lokalny adres MAC. Druga to
+floodowanie sieci lokalnej losowymi adresami MAC (podobnie do macof
+v1.1 Iana Vitka), co powoduje, ¿e switche wysy³aj± pakiety na
+wszystkie porty.
+
 %prep
 %setup -q
 %patch0 -p1
 %patch1 -p1
 
-mv Makefile.linux Makefile
+mv -f Makefile.linux Makefile
 
 %build
 %{__make} \
