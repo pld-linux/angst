@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/angst/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-libnet.patch
 URL:		http://angst.sourceforge.net/
-BuildRequires:	libnet-devel
+BuildRequires:	libnet1-devel
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
