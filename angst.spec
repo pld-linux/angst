@@ -5,7 +5,7 @@ Version:	0.4b
 Release:	1
 License:	BSD
 Group:		Networking/Utilities
-Source0:	http://heanet.dl.sourceforge.net/angst/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/angst/%{name}-%{version}.tar.gz
 # Source0-md5:	21643cd776bf478c6fbe4ddabb826be8
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-libnet.patch
