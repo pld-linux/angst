@@ -1,5 +1,5 @@
 Summary:	Active sniffer
-Summary(pl.UTF-8):   Aktywny sniffer
+Summary(pl.UTF-8):	Aktywny sniffer
 Name:		angst
 Version:	0.4b
 Release:	1
